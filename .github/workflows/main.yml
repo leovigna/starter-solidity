@@ -16,5 +16,8 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: "12.16"
+      # Set login for package registries
+      - run: npm set //registry.npmjs.org/:_authToken=${{secrets.NPMJS_TOKEN}}
+      - run: npm set //npm.pkg.github.com/:_authToken=${{secrets.GPR_TOKEN}}
       - run: npm install
       - run: npm run test
