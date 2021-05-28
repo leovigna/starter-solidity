@@ -1,10 +1,4 @@
-import { ExampleContract } from '../types/truffle-contracts';
-
-import ExampleArtifact from '../build/contracts/Example.json';
-
-const Contract = require('@truffle/contract');
-
-export const Example = Contract(ExampleArtifact) as ExampleContract;
+import Example from '../truffle/Example';
 
 export const contracts = {
     Example: Example,

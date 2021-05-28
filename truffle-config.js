@@ -1,17 +1,6 @@
-// const HDWalletProvider = require('@truffle/hdwallet-provider');
-
 module.exports = {
-    networks: {
-        development: {
-            host: '127.0.0.1',
-            port: 8545,
-            network_id: '*', // eslint-disable-line @typescript-eslint/camelcase
-            gas: 8500000, // pump pump the gas
-            websockets: true,
-        },
-    },
-
-    // Configure your compilers
+    contracts_directory: './src/solidity', // eslint-disable-line @typescript-eslint/camelcase
+    contracts_build_directory: './src/abi', // eslint-disable-line @typescript-eslint/camelcase
     compilers: {
         solc: {
             version: '0.6.12', // Fetch exact version from solc-bin (default: truffle's version)
